@@ -2,27 +2,36 @@
 
 import { revealTransition, revealVariants } from "@/lib/motion";
 import { cn } from "@/lib/utils";
-import { motion, useReducedMotion } from "framer-motion";
-import type { HTMLAttributes } from "react";
+import { motion, useReducedMotion, type HTMLMotionProps } from "framer-motion";
 
-type RevealProps = HTMLAttributes<HTMLDivElement> & {
+type RevealProps = HTMLMotionProps<"div"> & {
   delay?: number;
 };
 
-export function Reveal({ className, delay = 0, ...props }: RevealProps) {
+export function Reveal({
+  className,
+  delay = 0,
+  initial,
+  animate,
+  whileInView,
+  variants,
+  transition,
+  viewport,
+  ...props
+}: RevealProps) {
   const reduceMotion = useReducedMotion();
 
   if (reduceMotion) {
-    return <div className={className} {...props} />;
+    return <div className={cn(className)} {...props} />;
   }
 
   return (
     <motion.div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
-      variants={revealVariants}
-      transition={{ ...revealTransition, delay }}
+      initial={initial ?? "hidden"}
+      whileInView={whileInView ?? "visible"}
+      viewport={viewport ?? { once: true, amount: 0.3 }}
+      variants={variants ?? revealVariants}
+      transition={transition ?? { ...revealTransition, delay }}
       className={cn(className)}
       {...props}
     />
