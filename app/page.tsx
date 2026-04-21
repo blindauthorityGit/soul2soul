@@ -1,3 +1,5 @@
+
+
 import {
   AboutSection,
   ContactSection,
@@ -5,6 +7,8 @@ import {
   ProcessSection,
   ServicesIntroSection,
   ServicesListSection,
+  SimpleIntroSection,
+  AboutUsSection,
   SiteFooter,
 } from "@/components/sections";
 
@@ -15,8 +19,9 @@ export default function HomePage() {
         <HeroSection />
         <ServicesIntroSection />
         <ServicesListSection />
+        <SimpleIntroSection />
         <ProcessSection />
-        <AboutSection />
+        <AboutUsSection />
         <ContactSection />
       </main>
       <SiteFooter />

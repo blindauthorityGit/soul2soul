@@ -10,8 +10,37 @@ body {
   min-height: 100%;
 }
 
+
+:root {
+  --font-body: "mr-eaves-modern", "mr-eaves-sans", Arial, sans-serif;
+  --font-heading: "artigo", Georgia, serif;
+}
+
+html,
 body {
-  font-family: var(--font-sans), sans-serif;
-  background: var(--surface);
-  color: var(--text-default);
+  min-height: 100%;
+  font-family: var(--font-body);
+
+  background-image: url("/bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-heading {
+  font-family: var(--font-heading);
 }
