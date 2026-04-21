@@ -4,6 +4,9 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
 
+const easing = [0.22, 1, 0.36, 1] as const;
+const easingExit = [0.4, 0, 0.2, 1] as const;
+
 const SERVICES = [
   {
     id: "01",
@@ -54,15 +57,15 @@ const itemVariants = {
     y: 0,
     transition: {
       duration: 0.85,
-      ease: [0.22, 1, 0.36, 1],
+      ease: easing,
     },
   },
 };
 
 export function ServicesListSection() {
-  const [openId, setOpenId] = useState(null);
+  const [openId, setOpenId] = useState<string | null>(null);
 
-  const toggleItem = (id) => {
+  const toggleItem = (id: string) => {
     setOpenId((prev) => (prev === id ? null : id));
   };
 
@@ -94,7 +97,7 @@ export function ServicesListSection() {
                     transition={{
                       duration: 0.55,
                       delay: index * 0.1,
-                      ease: [0.22, 1, 0.36, 1],
+                      ease: easing,
                     }}
                     className="mt-[0.38em] flex h-7 w-7 items-center justify-center rounded-full border border-[#F4F1EB]/70 text-[11px] leading-none text-[#F4F1EB]/90 sm:h-8 sm:w-8 sm:text-[12px] md:h-10 md:w-10 md:text-[15px]"
                   >
@@ -148,7 +151,7 @@ export function ServicesListSection() {
                         transition: {
                           height: {
                             duration: 0.55,
-                            ease: [0.22, 1, 0.36, 1],
+                            ease: easing,
                           },
                           opacity: {
                             duration: 0.32,
@@ -162,7 +165,7 @@ export function ServicesListSection() {
                         transition: {
                           height: {
                             duration: 0.42,
-                            ease: [0.4, 0, 0.2, 1],
+                            ease: easingExit,
                           },
                           opacity: {
                             duration: 0.18,
@@ -177,7 +180,7 @@ export function ServicesListSection() {
                           initial={{ y: 10, opacity: 0 }}
                           animate={{ y: 0, opacity: 1 }}
                           exit={{ y: -6, opacity: 0 }}
-                          transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+                          transition={{ duration: 0.35, ease: easing }}
                           className="max-w-[720px] md:max-w-[760px]"
                         >
                           <p className="text-[14px] leading-relaxed text-[#F4F1EB]/82 sm:text-[15px] md:text-[16px] xl:text-[18px]">
