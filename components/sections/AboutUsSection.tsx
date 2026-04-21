@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const ease = [0.22, 1, 0.36, 1];
+const ease = [0.22, 1, 0.36, 1] as const;
 
 export function AboutUsSection() {
   return (
@@ -35,9 +35,9 @@ export function AboutUsSection() {
               className="max-w-[10.5ch] font-serif text-[52px] uppercase leading-[0.9] tracking-[-0.03em] text-[#3d7d80] sm:text-[64px] md:text-[82px] xl:text-[96px]"
             >
               Wir hören
-              
+              {" "}
               zu, bevor wir
-        
+              {" "}
               gestalten.
             </motion.h2>
 
@@ -50,7 +50,6 @@ export function AboutUsSection() {
             >
               <p className="text-[18px] font-[350] leading-[1.45] tracking-[0.01em] text-[#2B2B2B] md:text-[23px] md:leading-[1.43]">
                 Wir arbeiten nicht für dich, wir denken mit dir.
-           
                 Statt klassischer Agenturarbeit begleiten wir
                 dich dabei, Klarheit zu gewinnen, deine Marke
                 zu strukturieren und eine Präsenz aufzubauen,
@@ -64,7 +63,7 @@ export function AboutUsSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.25 }}
             transition={{ duration: 1.05, delay: 0.12, ease }}
-            className="relative flex  items-end justify-center self-end md:min-h-[720px] md:justify-end"
+            className="relative flex items-end justify-center self-end md:min-h-[720px] md:justify-end"
           >
             <div className="relative w-full max-w-[760px] md:max-w-[860px]">
               <Image
