@@ -1,7 +1,6 @@
 
 
 import {
-  AboutSection,
   ContactSection,
   HeroSection,
   ProcessSection,
