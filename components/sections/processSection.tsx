@@ -25,6 +25,8 @@ const items = [
   },
 ];
 
+const easing = [0.22, 1, 0.36, 1] as const;
+
 const containerVariants = {
   hidden: {},
   show: {
@@ -45,7 +47,7 @@ const itemVariants = {
     y: 0,
     transition: {
       duration: 0.7,
-      ease: [0.22, 1, 0.36, 1],
+      ease: easing,
     },
   },
 };
@@ -66,12 +68,10 @@ export function ProcessSection() {
             variants={itemVariants}
             className="grid grid-cols-[80px_1fr] items-start gap-x-5 md:grid-cols-[110px_1fr] md:gap-x-8"
           >
-            {/* NUMBER */}
             <div className="select-none text-[90px] font-semibold leading-none tracking-[-0.04em] text-[#2f6f73]/10 md:text-[130px] xl:text-[150px]">
               {item.number}
             </div>
 
-            {/* CONTENT */}
             <div className="pt-2 md:pt-4">
               <h3 className="text-[26px] !font-sans font-semibold uppercase leading-[1.0] tracking-[-0.02em] text-[#2f6f73] md:text-[32px] xl:text-[36px]">
                 {item.title}
