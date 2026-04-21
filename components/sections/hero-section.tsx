@@ -5,8 +5,7 @@ import { useRef } from "react";
 import { Container } from "@/components/layout/container";
 import { useMediaQuery } from "@/hooks/use-media-query";
 
-const easing = [0.22, 1, 0.36, 1];
-
+const easing = [0.22, 1, 0.36, 1] as const;
 export function HeroSection() {
   const heroRef = useRef<HTMLElement | null>(null);
   const isDesktop = useMediaQuery("(min-width: 1024px)");
