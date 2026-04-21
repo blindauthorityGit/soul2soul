@@ -1,0 +1,49 @@
+:root {
+  --brand: #2c4a49;
+  --brand-strong: #223c3b;
+  --accent: #ca9b92;
+
+  --surface: #f8f4ef;
+  --surface-muted: #f1ebe4;
+  --surface-contrast: #e7ddd4;
+
+  --text-strong: #1f2626;
+  --text-default: #3b4645;
+  --text-muted: #687371;
+
+  --border-subtle: #d8cfc5;
+  --border-strong: #b8aea2;
+
+  --shadow-soft: 0 10px 30px rgba(34, 44, 44, 0.08);
+
+  --radius-card: 1rem;
+  --radius-pill: 9999px;
+
+  --space-section-sm: 5rem;
+  --space-section-lg: 7rem;
+}
+
+@theme inline {
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+
+  --color-brand: var(--brand);
+  --color-brand-strong: var(--brand-strong);
+  --color-accent: var(--accent);
+
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-surface-contrast: var(--surface-contrast);
+
+  --color-text-strong: var(--text-strong);
+  --color-text-default: var(--text-default);
+  --color-text-muted: var(--text-muted);
+
+  --color-border-subtle: var(--border-subtle);
+  --color-border-strong: var(--border-strong);
+
+  --shadow-soft: var(--shadow-soft);
+
+  --radius-card: var(--radius-card);
+  --radius-pill: var(--radius-pill);
+}
