@@ -7,7 +7,7 @@ const ease = [0.22, 1, 0.36, 1] as const;
 
 export function AboutUsSection() {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden" id="ueber-uns">
       <div className="mx-auto max-w-[1600px] px-6 md:px-10 xl:px-16">
         <div className="grid min-h-[720px] items-end gap-0 md:min-h-[760px] md:grid-cols-[0.95fr_1.15fr]">
           <motion.div

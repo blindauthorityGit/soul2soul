@@ -84,8 +84,17 @@ export function HeroSection() {
                 animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 transition={{ duration: 0.9, delay: 0.12, ease: easing }}
                 style={isDesktop ? { x: desktopLine1X } : undefined}
-                className="font-heading text-[clamp(3.2rem,15vw,4.9rem)] leading-[0.9] tracking-[-0.055em] text-[#2f7c83] transform-gpu lg:text-[clamp(4.2rem,8vw,8.5rem)] lg:leading-[0.88]"
-              >
+className="
+  font-heading
+  text-[clamp(2.4rem,10vw,3.4rem)]
+  leading-[0.92]
+  tracking-[-0.045em]
+  text-[#2f7c83]
+  transform-gpu
+  sm:text-[clamp(2.8rem,11vw,3.8rem)]
+  lg:text-[clamp(4.2rem,8vw,8.5rem)]
+  lg:leading-[0.88]
+"              >
                 VERBINDUNG.
               </motion.div>
 
@@ -94,8 +103,17 @@ export function HeroSection() {
                 animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 transition={{ duration: 0.9, delay: 0.28, ease: easing }}
                 style={isDesktop ? { x: desktopLine2X } : undefined}
-                className="font-heading text-[clamp(3.2rem,15vw,4.9rem)] leading-[0.9] tracking-[-0.055em] text-[#2f7c83] transform-gpu lg:text-[clamp(4.2rem,8vw,8.5rem)] lg:leading-[0.88]"
-              >
+className="
+  font-heading
+  text-[clamp(2.4rem,10vw,3.4rem)]
+  leading-[0.92]
+  tracking-[-0.045em]
+  text-[#2f7c83]
+  transform-gpu
+  sm:text-[clamp(2.8rem,11vw,3.8rem)]
+  lg:text-[clamp(4.2rem,8vw,8.5rem)]
+  lg:leading-[0.88]
+"              >
                 WIRKUNG.
               </motion.div>
 
@@ -104,8 +122,17 @@ export function HeroSection() {
                 animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 transition={{ duration: 0.9, delay: 0.44, ease: easing }}
                 style={isDesktop ? { x: desktopLine3X } : undefined}
-                className="font-heading text-[clamp(2.95rem,13.5vw,4.5rem)] leading-[0.9] tracking-[-0.055em] text-[#df9a82] transform-gpu lg:text-[clamp(4rem,7.6vw,8rem)] lg:leading-[0.88]"
-              >
+className="
+  font-heading
+  text-[clamp(2.4rem,10vw,3.4rem)]
+  leading-[0.92]
+  tracking-[-0.045em]
+  text-[#5FD1E3]
+  transform-gpu
+  sm:text-[clamp(2.8rem,11vw,3.8rem)]
+  lg:text-[clamp(4.2rem,8vw,8.5rem)]
+  lg:leading-[0.88]
+"              >
                 PRÄSENZ.
               </motion.div>
             </motion.div>

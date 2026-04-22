@@ -9,6 +9,7 @@ import {
   useSpring,
 } from "framer-motion";
 import { ArrowRight, X } from "lucide-react";
+import ContactForm from "@/components/forms/ContactForms";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -90,7 +91,7 @@ export function ServicesIntroSection() {
               >
                 Verbindung.
                 <br />
-                Wirkung. <span className="text-[#e5a38d]">Präsenz.</span>
+                Wirkung. <span className="text-[#5FD1E3]">Präsenz.</span>
               </motion.h2>
 
               <motion.div
@@ -133,44 +134,49 @@ export function ServicesIntroSection() {
         </div>
       </section>
 
-      {open && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/45 px-4">
-          <div className="relative w-full max-w-[640px] bg-[#f7f5f1] p-8 shadow-2xl md:p-10">
-            <button
-              type="button"
-              onClick={() => setOpen(false)}
-              className="absolute right-4 top-4 inline-flex h-10 w-10 items-center justify-center text-[#3f3a35] transition hover:bg-black/5"
-              aria-label="Modal schließen"
-            >
-              <X className="h-5 w-5" />
-            </button>
+    {open && (
+  <div
+    className="fixed inset-0 z-[100] flex items-center justify-center bg-black/45 px-4"
+    onClick={() => setOpen(false)}
+  >
+    <div
+      className="relative w-full max-w-[720px] bg-[#f7f5f1] p-8 shadow-2xl md:p-12"
+      onClick={(e) => e.stopPropagation()}
+    >
+      {/* Close */}
+      <button
+        type="button"
+        onClick={() => setOpen(false)}
+        className="absolute right-4 top-4 inline-flex h-10 w-10 items-center justify-center text-[#3f3a35] transition hover:bg-black/5"
+        aria-label="Modal schließen"
+      >
+        <X className="h-5 w-5" />
+      </button>
 
-            <p className="mb-3 text-[12px] font-medium uppercase tracking-[0.16em] text-[#5d8f95]">
-              Platzhalter
-            </p>
+      {/* Header */}
+      <p className="mb-4 text-[12px] font-medium uppercase tracking-[0.16em] text-[#5d8f95]">
+        Kontakt
+      </p>
 
-            <h3 className="font-serif text-3xl leading-tight text-[#2f7c83] md:text-4xl">
-              Terminmodul folgt hier
-            </h3>
+      <h3 className="font-serif text-[clamp(2rem,3.5vw,3rem)] leading-[1.05] text-[#2f7c83]">
+        Lass uns sprechen
+      </h3>
 
-            <p className="mt-5 text-[17px] font-[350] leading-[1.6] text-[#2B2B2B]">
-              Dieses Modal ist vorerst nur als Platzhalter eingebaut. Hier kann
-              später z. B. Calendly, ein Formular oder eine eigene
-              Terminbuchungslogik rein.
-            </p>
+      <p className="mt-4 max-w-[560px] text-[16px] leading-[1.6] text-[#2B2B2B]">
+        Schreib uns kurz, worum es geht. Wir melden uns persönlich bei dir zurück.
+      </p>
 
-            <div className="mt-8">
-              <button
-                type="button"
-                onClick={() => setOpen(false)}
-                className="inline-flex items-center justify-center bg-[#2f7c83] px-6 py-3 text-sm font-medium tracking-[0.08em] text-white transition hover:bg-[#286a70]"
-              >
-                Schließen
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+      {/* FORM */}
+      <ContactForm
+        onSuccess={() => {
+          setTimeout(() => {
+            setOpen(false);
+          }, 1200);
+        }}
+      />
+    </div>
+  </div>
+)}
     </>
   );
 }

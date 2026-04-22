@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export function SimpleIntroSection() {
   return (
-    <section className="relative w-full overflow-hidden py-32 md:py-40">
+    <section className="relative w-full overflow-hidden py-32 md:py-40" id="arbeitsweise">
       {/* subtle background texture / gradient */}
       <div className="pointer-events-none absolute inset-0 opacity-[0.4]">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(0,0,0,0.04),transparent_60%)]" />
@@ -28,13 +28,13 @@ export function SimpleIntroSection() {
 
           {/* statement */}
           <h2 className="font-heading text-[30px] leading-[1.2] tracking-tight text-[#3f6f6c] sm:text-[36px] md:text-[40px] lg:text-[48px]">
-            Du brauchst keine Inhalte. Du brauchst Klarheit.
+            Du brauchst keine Inhalte. Du brauchst <span className="text-[#5FD1E3]">Klarheit.</span> 
         
             Ohne klare Richtung wird Content beliebig.
  
             Ohne Substanz bleibt Gestaltung nur Oberfläche.
 
-            Wir helfen dir, eine Marke aufzubauen,
+            Wir helfen dir, eine<span className="text-[#5FD1E3]"> Marke aufzubauen</span>, 
 
             die stimmig ist – und funktioniert.
           </h2>

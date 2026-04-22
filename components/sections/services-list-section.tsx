@@ -70,7 +70,7 @@ export function ServicesListSection() {
   };
 
   return (
-    <section className="w-full bg-[#8A5A6B] text-[#F4F1EB]">
+    <section className="w-full bg-[#8A5A6B] text-[#F4F1EB]" id="leistungen">
       <div className="mx-auto w-full max-w-[1920px] px-6 py-16 md:px-10 md:py-24 xl:px-16 xl:py-48">
         <motion.div
           variants={containerVariants}
