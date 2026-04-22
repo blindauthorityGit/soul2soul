@@ -32,7 +32,7 @@ export function AboutUsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.35 }}
               transition={{ duration: 0.9, delay: 0.08, ease }}
-              className="max-w-[10.5ch] font-serif text-[52px] uppercase leading-[0.9] tracking-[-0.03em] text-[#3d7d80] sm:text-[64px] md:text-[82px] xl:text-[96px]"
+              className="max-w-[10.5ch] font-serif text-[clamp(3rem,6vw,6.5rem)] uppercase leading-[0.9] tracking-[-0.03em] text-[#3d7d80] sm:text-[64px] md:text-[82px] xl:text-[96px]"
             >
               Wir hören
               {" "}

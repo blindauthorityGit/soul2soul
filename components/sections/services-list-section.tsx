@@ -113,8 +113,7 @@ export function ServicesListSection() {
                       layout="position"
                       className="
                         font-heading font-normal tracking-[0.01em] text-[#F4F1EB]
-                        text-[clamp(2.8rem,11vw,4.2rem)]
-                        leading-[0.9]
+text-[clamp(1.8rem,7.5vw,3rem)]                        leading-[0.9]
                         sm:text-[clamp(3.2rem,9vw,4.9rem)]
                         md:max-w-none
                         md:text-[clamp(3.8rem,5.1vw,5.7rem)]

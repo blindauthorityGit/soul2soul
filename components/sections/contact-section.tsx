@@ -18,7 +18,7 @@ export function ContactSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.9, ease }}
-            className="font-serif text-[clamp(3.4rem,8vw,6.6rem)] leading-[0.9] tracking-[-0.03em] text-[#2f7c83]"
+            className="font-serif text-[clamp(3rem,6vw,6.5rem)] leading-[0.9] tracking-[-0.03em] text-[#2f7c83]"
           >
             KONTAKT
           </motion.h2>

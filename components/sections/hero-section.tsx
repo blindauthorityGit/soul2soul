@@ -6,6 +6,7 @@ import { Container } from "@/components/layout/container";
 import { useMediaQuery } from "@/hooks/use-media-query";
 
 const easing = [0.22, 1, 0.36, 1] as const;
+
 export function HeroSection() {
   const heroRef = useRef<HTMLElement | null>(null);
   const isDesktop = useMediaQuery("(min-width: 1024px)");
@@ -15,14 +16,13 @@ export function HeroSection() {
     offset: isDesktop ? ["start start", "end start"] : ["start start", "end 15%"],
   });
 
-  // smooth the scroll signal a bit
   const smoothProgress = useSpring(scrollYProgress, {
     stiffness: 90,
     damping: 24,
     mass: 0.28,
   });
 
-  // DESKTOP: keep alternating line drift, but fade whole headline as one block
+  // DESKTOP
   const desktopLine1X = useTransform(smoothProgress, [0, 0.42], [0, -90]);
   const desktopLine2X = useTransform(smoothProgress, [0, 0.42], [0, 90]);
   const desktopLine3X = useTransform(smoothProgress, [0, 0.42], [0, -70]);
@@ -41,7 +41,7 @@ export function HeroSection() {
     [1, 1, 0]
   );
 
-  // MOBILE: animate the whole headline much more gently
+  // MOBILE
   const mobileHeadlineY = useTransform(smoothProgress, [0, 0.75], [0, 18]);
   const mobileHeadlineOpacity = useTransform(
     smoothProgress,
@@ -64,6 +64,9 @@ export function HeroSection() {
     ? { x: desktopCopyX, y: desktopCopyY, opacity: desktopCopyOpacity }
     : { y: mobileCopyY, opacity: mobileCopyOpacity };
 
+  const headlineBaseClass =
+    "font-heading whitespace-nowrap leading-[0.9] tracking-[-0.05em] transform-gpu";
+
   return (
     <section ref={heroRef} className="relative overflow-hidden">
       <Container>
@@ -84,17 +87,8 @@ export function HeroSection() {
                 animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 transition={{ duration: 0.9, delay: 0.12, ease: easing }}
                 style={isDesktop ? { x: desktopLine1X } : undefined}
-className="
-  font-heading
-  text-[clamp(2.4rem,10vw,3.4rem)]
-  leading-[0.92]
-  tracking-[-0.045em]
-  text-[#2f7c83]
-  transform-gpu
-  sm:text-[clamp(2.8rem,11vw,3.8rem)]
-  lg:text-[clamp(4.2rem,8vw,8.5rem)]
-  lg:leading-[0.88]
-"              >
+                className={`${headlineBaseClass} text-[13.6vw] text-[#2f7c83] sm:text-[14vw] lg:text-[clamp(4.2rem,8vw,8.5rem)] lg:leading-[0.88]`}
+              >
                 VERBINDUNG.
               </motion.div>
 
@@ -103,17 +97,8 @@ className="
                 animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 transition={{ duration: 0.9, delay: 0.28, ease: easing }}
                 style={isDesktop ? { x: desktopLine2X } : undefined}
-className="
-  font-heading
-  text-[clamp(2.4rem,10vw,3.4rem)]
-  leading-[0.92]
-  tracking-[-0.045em]
-  text-[#2f7c83]
-  transform-gpu
-  sm:text-[clamp(2.8rem,11vw,3.8rem)]
-  lg:text-[clamp(4.2rem,8vw,8.5rem)]
-  lg:leading-[0.88]
-"              >
+                className={`${headlineBaseClass} text-[13.6vw] text-[#2f7c83] sm:text-[14vw] lg:text-[clamp(4.2rem,8vw,8.5rem)] lg:leading-[0.88]`}
+              >
                 WIRKUNG.
               </motion.div>
 
@@ -122,17 +107,8 @@ className="
                 animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 transition={{ duration: 0.9, delay: 0.44, ease: easing }}
                 style={isDesktop ? { x: desktopLine3X } : undefined}
-className="
-  font-heading
-  text-[clamp(2.4rem,10vw,3.4rem)]
-  leading-[0.92]
-  tracking-[-0.045em]
-  text-[#5FD1E3]
-  transform-gpu
-  sm:text-[clamp(2.8rem,11vw,3.8rem)]
-  lg:text-[clamp(4.2rem,8vw,8.5rem)]
-  lg:leading-[0.88]
-"              >
+                className={`${headlineBaseClass} text-[13.6vw] text-[#5FD1E3] sm:text-[13.8vw] lg:text-[clamp(4rem,7.6vw,8rem)] lg:leading-[0.88]`}
+              >
                 PRÄSENZ.
               </motion.div>
             </motion.div>
@@ -155,7 +131,7 @@ className="
                 xl:w-[320px]
               "
             >
-              <p className="font-body text-[clamp(1.12rem,4.9vw,1.45rem)] font-light leading-[1.14] tracking-[0.005em] text-[#2f7c83] lg:text-[clamp(1.42rem,2.05vw,2.35rem)] lg:leading-[1.12]">
+              <p className="font-body text-[clamp(1.6rem,4.3vw,1.2rem)] font-light leading-[1.18] tracking-[0.002em] text-[#2f7c83] lg:text-[clamp(1.42rem,2.05vw,2.35rem)] lg:leading-[1.12]">
                 Wir verbinden Strategie,
                 <br />
                 Design und Klarheit

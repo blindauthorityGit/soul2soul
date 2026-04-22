@@ -68,17 +68,27 @@ export default function MenuBar() {
       <div
         className={[
           "overflow-hidden border-t border-black/10 bg-transparent transition-all duration-300 md:hidden",
-          mobileOpen ? "max-h-80" : "max-h-0 border-t-0",
+          mobileOpen ? "max-h-[420px]" : "max-h-0 border-t-0",
         ].join(" ")}
       >
-        <nav className="mx-auto max-w-[1600px] px-6 pb-6 pt-4">
-          <ul className="flex flex-col gap-3">
+        <nav className="mx-auto max-w-[1600px] px-6 pb-8 pt-6">
+          <ul className="flex flex-col gap-5">
             {NAV_ITEMS.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
                   onClick={() => setMobileOpen(false)}
-                  className="block font-sans text-[17px] font-medium tracking-[0.03em] text-[#2f7b80] transition-opacity hover:opacity-70"
+                  className="
+                    block
+                    font-heading
+                    text-[clamp(1.4rem,5.5vw,1.8rem)]
+                    leading-[1.15]
+                    tracking-[0.01em]
+                    text-[#2f7b80]
+                    py-2
+                    transition-opacity
+                    hover:opacity-70
+                  "
                 >
                   {item.label}
                 </Link>
