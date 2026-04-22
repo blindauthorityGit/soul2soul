@@ -8,6 +8,7 @@ export default function ContactForm({ onSuccess }) {
         email: "",
         phone: "",
         message: "",
+        company: "", // 🧠 honeypot
     });
 
     const [status, setStatus] = useState("idle");
@@ -38,108 +39,89 @@ export default function ContactForm({ onSuccess }) {
             const data = await res.json();
 
             if (!res.ok) {
-                throw new Error(data?.error || "Nachricht konnte nicht gesendet werden.");
+                throw new Error(data?.error || "Fehler beim Senden.");
             }
 
             setStatus("success");
+
             setFormData({
                 name: "",
                 email: "",
                 phone: "",
                 message: "",
+                company: "",
             });
 
             if (onSuccess) onSuccess();
         } catch (err) {
             setStatus("error");
-            setError(err.message || "Es ist ein Fehler aufgetreten.");
+            setError(err.message);
         }
     }
 
     return (
         <form onSubmit={handleSubmit} className="mt-8 space-y-5">
+            {/* 🧠 Honeypot */}
+            <input
+                type="text"
+                name="company"
+                value={formData.company}
+                onChange={handleChange}
+                className="hidden"
+                autoComplete="off"
+            />
+
             <div className="grid gap-4 sm:grid-cols-2">
-                <div>
-                    <label htmlFor="name" className="mb-2 block text-[11px] uppercase tracking-[0.18em] text-[#4e8b92]">
-                        Name *
-                    </label>
-                    <input
-                        id="name"
-                        name="name"
-                        type="text"
-                        required
-                        value={formData.name}
-                        onChange={handleChange}
-                        className="w-full border border-black/10 bg-transparent px-4 py-3 text-[15px] text-black outline-none transition placeholder:text-black/35 focus:border-[#4e8b92]"
-                        placeholder="Dein Name"
-                    />
-                </div>
-
-                <div>
-                    <label
-                        htmlFor="email"
-                        className="mb-2 block text-[11px] uppercase tracking-[0.18em] text-[#4e8b92]"
-                    >
-                        E-Mail *
-                    </label>
-                    <input
-                        id="email"
-                        name="email"
-                        type="email"
-                        required
-                        value={formData.email}
-                        onChange={handleChange}
-                        className="w-full border border-black/10 bg-transparent px-4 py-3 text-[15px] text-black outline-none transition placeholder:text-black/35 focus:border-[#4e8b92]"
-                        placeholder="mail@beispiel.at"
-                    />
-                </div>
-            </div>
-
-            <div>
-                <label htmlFor="phone" className="mb-2 block text-[11px] uppercase tracking-[0.18em] text-[#4e8b92]">
-                    Telefon
-                </label>
                 <input
-                    id="phone"
-                    name="phone"
-                    type="text"
-                    value={formData.phone}
+                    name="name"
+                    required
+                    value={formData.name}
                     onChange={handleChange}
-                    className="w-full border border-black/10 bg-transparent px-4 py-3 text-[15px] text-black outline-none transition placeholder:text-black/35 focus:border-[#4e8b92]"
-                    placeholder="+43 ..."
+                    placeholder="Name *"
+                    className="w-full border border-black/10 px-4 py-3 text-[15px] outline-none focus:border-[#2f7c83]"
+                />
+
+                <input
+                    name="email"
+                    type="email"
+                    required
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="E-Mail *"
+                    className="w-full border border-black/10 px-4 py-3 text-[15px] outline-none focus:border-[#2f7c83]"
                 />
             </div>
 
-            <div>
-                <label htmlFor="message" className="mb-2 block text-[11px] uppercase tracking-[0.18em] text-[#4e8b92]">
-                    Nachricht *
-                </label>
-                <textarea
-                    id="message"
-                    name="message"
-                    required
-                    rows={5}
-                    value={formData.message}
-                    onChange={handleChange}
-                    className="w-full resize-none border border-black/10 bg-transparent px-4 py-3 text-[15px] text-black outline-none transition placeholder:text-black/35 focus:border-[#4e8b92]"
-                    placeholder="Erzähl uns kurz, worum es geht."
-                />
-            </div>
+            <input
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                placeholder="Telefon"
+                className="w-full border border-black/10 px-4 py-3 text-[15px] outline-none focus:border-[#2f7c83]"
+            />
+
+            <textarea
+                name="message"
+                required
+                rows={5}
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Nachricht *"
+                className="w-full resize-none border border-black/10 px-4 py-3 text-[15px] outline-none focus:border-[#2f7c83]"
+            />
 
             <div className="flex items-center gap-4 pt-2">
                 <button
                     type="submit"
                     disabled={status === "loading"}
-                    className="inline-flex min-w-[180px] items-center justify-center bg-[#2f7d85] px-6 py-3 text-[13px] font-medium tracking-[0.12em] text-white transition hover:bg-[#276b72] disabled:cursor-not-allowed disabled:opacity-70"
+                    className="bg-[#2f7c83] px-6 py-3 text-[13px] tracking-[0.1em] text-white hover:bg-[#286a70] disabled:opacity-70"
                 >
-                    {status === "loading" ? "Wird gesendet ..." : "Nachricht senden"}
+                    {status === "loading" ? "Senden..." : "Nachricht senden"}
                 </button>
 
-                {status === "success" && (
-                    <p className="text-sm text-[#2f7d85]">Danke — deine Nachricht wurde gesendet.</p>
-                )}
+                {status === "success" && <span className="text-sm text-[#2f7c83]">Gesendet ✓</span>}
 
-                {status === "error" && <p className="text-sm text-red-600">{error}</p>}
+                {status === "error" && <span className="text-sm text-red-600">{error}</span>}
             </div>
         </form>
     );

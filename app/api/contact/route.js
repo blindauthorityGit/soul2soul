@@ -12,6 +12,9 @@ function escapeHtml(str = "") {
 export async function POST(req) {
     try {
         const body = await req.json();
+        if (body.company) {
+            return Response.json({ ok: true }); // silently ignore bots
+        }
 
         const name = (body?.name || "").trim();
         const email = (body?.email || "").trim();
