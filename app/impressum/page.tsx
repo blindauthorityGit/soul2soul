@@ -14,26 +14,41 @@ export default function ImpressumPage() {
   return (
     <LegalPage eyebrow="Rechtliches" title="Impressum">
       <h2>Angaben gemäß § 5 ECG</h2>
-      <p>
-        Soul2Soul
-        <br />
-        Denise Ritschel
-        <br />
-        Gymelsdorfer Gasse 19
-        <br />
-        2700 Wiener Neustadt
-        <br />
-        Österreich
-      </p>
-      <p>
-        Sandra Löbl
-        <br />
-        Kirchengasse 11
-        <br />
-        2860 Kirchschlag
-        <br />
-        Österreich
-      </p>
+
+      <div className="my-8">
+        <p className="mb-6 text-center text-sm font-medium uppercase tracking-[0.18em] text-primary">
+          Soul2Soul
+          <br />
+          Eine Zusammenarbeit von
+        </p>
+
+        <div className="grid gap-8 md:grid-cols-2">
+          <div>
+            <p>
+              Sandra Löbl
+              <br />
+              Kirchengasse 11
+              <br />
+              2860 Kirchschlag
+              <br />
+              Österreich
+            </p>
+          </div>
+
+          <div>
+            <p>
+              Denise Ritschel
+              <br />
+              Gymelsdorfer Gasse 19
+              <br />
+              2700 Wiener Neustadt
+              <br />
+              Österreich
+            </p>
+          </div>
+        </div>
+      </div>
+
       <p>
         E-Mail: <a href="mailto:office@soul2soul.at">office@soul2soul.at</a>
         <br />
