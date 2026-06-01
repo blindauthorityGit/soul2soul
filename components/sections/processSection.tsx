@@ -6,22 +6,22 @@ const items = [
   {
     number: "1",
     title: "VERSTEHEN",
-    text: "Wir hören zu und erfassen dein Gesamtbild.",
+    text: "Wir hören zu, erfassen Zusammenhänge und verstehen, was hinter deiner Arbeit wirklich wichtig ist.",
   },
   {
     number: "2",
     title: "KLARHEIT SCHAFFEN",
-    text: "Wir hören zu und erfassen dein Gesamtbild.",
+    text: "Gemeinsam bringen wir Struktur, Fokus und eine klare Richtung in deinen Außenauftritt.",
   },
   {
     number: "3",
     title: "SICHTBAR MACHEN",
-    text: "Wir hören zu und erfassen dein Gesamtbild.",
+    text: "Wir entwickeln Gestaltung, die Vertrauen schafft und deine Werte authentisch nach außen trägt.",
   },
   {
     number: "4",
     title: "BEGLEITEN",
-    text: "Wir hören zu und erfassen dein Gesamtbild.",
+    text: "Von der ersten Idee bis zur Umsetzung stehen wir persönlich, ehrlich und langfristig an deiner Seite.",
   },
 ];
 

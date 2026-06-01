@@ -89,9 +89,9 @@ export function ServicesIntroSection() {
                 transition={{ duration: 0.85, delay: 0.16, ease }}
                 className="font-serif text-[clamp(3rem,6vw,6.5rem)] leading-[0.9] tracking-[-0.03em] text-[#2f7c83]"
               >
-                Verbindung.
+                Klarheit.
                 <br />
-                Wirkung. <span className="text-[#5FD1E3]">Präsenz.</span>
+                Wirkung. <span className="text-[#5FD1E3]">Sichtbarkeit.</span>
               </motion.h2>
 
               <motion.div
@@ -102,13 +102,22 @@ export function ServicesIntroSection() {
                 className="mt-8 max-w-[640px]"
               >
                 <p className="text-[18px] font-[350] leading-[1.45] tracking-[0.01em] text-[#2B2B2B] md:text-[23px] md:leading-[1.43]">
-                  Wir arbeiten nicht für dich, wir denken mit dir. Statt
-                  klassischer Agenturarbeit begleiten wir dich dabei, Klarheit
-                  zu gewinnen, deine Marke zu strukturieren und eine Präsenz
-                  aufzubauen, die wirklich wirkt. Unser Ziel ist es,
-                  professionelle und zugleich leistbare Designlösungen
-                  anzubieten – besonders für Unternehmen mit begrenzten
-                  Ressourcen und einem laufenden Bedarf an visueller
+                  Nicht jede Branche passt in klassisches Agentur-Denken.
+                  Gerade persönliche und komplementärmedizinische Berufe
+                  brauchen Feingefühl, Verständnis und authentische
+                  Kommunikation statt Standard-Marketing.
+                  <br />
+                  <br />
+                  Deshalb arbeiten wir nicht einfach für dich — wir denken mit
+                  dir. Wir begleiten Unternehmen, Selbstständige und
+                  Herzensprojekte dabei, Klarheit zu gewinnen, ihre Marke zu
+                  strukturieren und eine Präsenz aufzubauen, die wirklich
+                  wirkt.
+                  <br />
+                  <br />
+                  Unser Ziel ist es, professionelle und zugleich leistbare
+                  Designlösungen anzubieten — besonders für Unternehmen mit
+                  begrenzten Ressourcen und einem laufenden Bedarf an visueller
                   Kommunikation.
                 </p>
               </motion.div>

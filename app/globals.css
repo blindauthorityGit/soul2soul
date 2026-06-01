@@ -44,3 +44,40 @@ h6 {
 .font-heading {
   font-family: var(--font-heading);
 }
+
+.legal-content {
+  color: #2b2b2b;
+  font-size: 18px;
+  font-weight: 350;
+  line-height: 1.65;
+}
+
+.legal-content h2 {
+  margin-top: 2.5rem;
+  color: #2f7c83;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  line-height: 1.05;
+}
+
+.legal-content h3 {
+  margin-top: 2rem;
+  color: #3f6f6c;
+  font-size: 1.55rem;
+  line-height: 1.1;
+}
+
+.legal-content p,
+.legal-content ul {
+  margin-top: 1rem;
+}
+
+.legal-content ul {
+  list-style: disc;
+  padding-left: 1.4rem;
+}
+
+.legal-content a {
+  color: #2f7c83;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}

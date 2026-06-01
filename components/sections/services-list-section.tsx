@@ -10,23 +10,23 @@ const easingExit = [0.4, 0, 0.2, 1] as const;
 const SERVICES = [
   {
     id: "01",
-    title: "Social Media Betreuung",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    title: "Social Media Design & Content",
+    text: "Social Media braucht heute mehr als schöne Bilder. Wir helfen dabei, Inhalte professionell aufzubereiten, Wiedererkennung zu schaffen und einen Auftritt zu entwickeln, der modern wirkt — ohne beliebig zu sein.",
   },
   {
     id: "02",
-    title: "Printdesign",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum.",
+    title: "Websites & Onepager",
+    text: "Eine Website ist oft der erste Berührungspunkt mit deinem Unternehmen. Deshalb gestalten wir Seiten, die klar aufgebaut, modern gestaltet und benutzerfreundlich sind — damit Menschen schnell verstehen, worum es bei dir geht.",
   },
   {
     id: "03",
-    title: "Merchandise & Werbemittel",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis interdum.",
+    title: "Flyer, Drucksorten & Printdesign",
+    text: "Auch gedruckte Gestaltung darf professionell, hochwertig und gleichzeitig persönlich wirken. Von Flyern über Visitenkarten bis hin zu Broschüren gestalten wir Drucksorten, die Vertrauen schaffen und im Gedächtnis bleiben.",
   },
   {
     id: "04",
-    title: "Persönliche Beratung",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nulla vitae elit libero, a pharetra augue.",
+    title: "Strategische Gestaltung & Klarheit",
+    text: "Gutes Design beginnt nicht mit Farben — sondern mit Klarheit. Gemeinsam schauen wir darauf, was dein Unternehmen wirklich braucht, wie du wahrgenommen werden möchtest und wie Gestaltung dich dabei unterstützen kann.",
   },
 ];
 

@@ -3,9 +3,48 @@ import MenuBar from "@/components/menu";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "soul2soul studio",
+  metadataBase: new URL("https://www.soul2soul.at"),
+  title: {
+    default: "Soul2Soul Designstudio | Klarheit. Wirkung. Sichtbarkeit.",
+    template: "%s | Soul2Soul Designstudio",
+  },
   description:
-    "Minimalistische, strategische Marken- und Designbegleitung für Klarheit, Präsenz und nachhaltige Wirkung.",
+    "Soul2Soul verbindet Strategie und Design zu einem klaren Außenauftritt: Social Media Design, Websites, Printdesign und persönliche Beratung.",
+  keywords: [
+    "Soul2Soul Designstudio",
+    "Grafikdesign",
+    "Webdesign",
+    "Social Media Design",
+    "Printdesign",
+    "Markenauftritt",
+    "Wiener Neustadt",
+    "Kirchschlag",
+  ],
+  authors: [{ name: "Soul2Soul Designstudio" }],
+  creator: "Soul2Soul Designstudio",
+  publisher: "Soul2Soul Designstudio",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "de_AT",
+    url: "/",
+    siteName: "Soul2Soul Designstudio",
+    title: "Soul2Soul Designstudio | Klarheit. Wirkung. Sichtbarkeit.",
+    description:
+      "Wir verbinden Strategie und Design zu einem Außenauftritt, der Vertrauen schafft.",
+  },
+  twitter: {
+    card: "summary",
+    title: "Soul2Soul Designstudio | Klarheit. Wirkung. Sichtbarkeit.",
+    description:
+      "Wir verbinden Strategie und Design zu einem Außenauftritt, der Vertrauen schafft.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

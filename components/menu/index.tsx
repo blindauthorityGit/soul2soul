@@ -6,9 +6,9 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const NAV_ITEMS = [
-  { label: "Leistungen", href: "#leistungen" },
-  { label: "Arbeitsweise", href: "#arbeitsweise" },
-  { label: "Über uns", href: "#ueber-uns" },
+  { label: "Leistungen", href: "/#leistungen" },
+  { label: "Arbeitsweise", href: "/#arbeitsweise" },
+  { label: "Über uns", href: "/#ueber-uns" },
 ];
 
 export default function MenuBar() {
@@ -20,7 +20,7 @@ export default function MenuBar() {
         <div className="flex h-[88px] items-center justify-between md:h-[110px]">
           {/* Logo */}
           <Link
-            href="#top"
+            href="/"
             className="relative z-20 shrink-0"
             onClick={() => setMobileOpen(false)}
             aria-label="Zur Startseite"

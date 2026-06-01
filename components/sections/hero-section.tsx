@@ -68,7 +68,7 @@ export function HeroSection() {
     "font-heading whitespace-nowrap leading-[0.9] tracking-[-0.05em] transform-gpu";
 
   return (
-    <section ref={heroRef} className="relative overflow-hidden">
+    <section ref={heroRef} className="relative overflow-hidden" id="top">
       <Container>
         <div
           className="
@@ -80,7 +80,7 @@ export function HeroSection() {
             lg:pt-16 lg:pb-20
           "
         >
-          <div className="relative w-full lg:w-fit">
+          <div className="relative w-full lg:-ml-10 lg:w-fit xl:-ml-16">
             <motion.div style={headlineWrapperStyle} className="shrink-0 transform-gpu">
               <motion.div
                 initial={{ opacity: 0, y: 32, filter: "blur(10px)" }}
@@ -89,7 +89,7 @@ export function HeroSection() {
                 style={isDesktop ? { x: desktopLine1X } : undefined}
                 className={`${headlineBaseClass} text-[13.6vw] text-[#2f7c83] sm:text-[14vw] lg:text-[clamp(4.2rem,8vw,8.5rem)] lg:leading-[0.88]`}
               >
-                VERBINDUNG.
+                KLARHEIT.
               </motion.div>
 
               <motion.div
@@ -109,7 +109,7 @@ export function HeroSection() {
                 style={isDesktop ? { x: desktopLine3X } : undefined}
                 className={`${headlineBaseClass} text-[13.6vw] text-[#5FD1E3] sm:text-[13.8vw] lg:text-[clamp(4rem,7.6vw,8rem)] lg:leading-[0.88]`}
               >
-                PRÄSENZ.
+                SICHTBARKEIT.
               </motion.div>
             </motion.div>
 
@@ -123,18 +123,16 @@ export function HeroSection() {
                 transform-gpu
                 lg:absolute
                 lg:mt-0
-                lg:left-[calc(100%+0.75rem)]
-                lg:bottom-[0.45rem]
-                lg:w-[290px]
-                xl:left-[calc(100%+0.9rem)]
-                xl:bottom-[0.55rem]
+                lg:left-[calc(100%+2.5rem)]
+                lg:bottom-0
+                lg:w-[300px]
+                xl:left-[calc(100%+3.5rem)]
+                xl:bottom-0
                 xl:w-[320px]
               "
             >
               <p className="font-body text-[clamp(1.6rem,4.3vw,1.2rem)] font-light leading-[1.18] tracking-[0.002em] text-[#2f7c83] lg:text-[clamp(1.42rem,2.05vw,2.35rem)] lg:leading-[1.12]">
-                Wir verbinden Strategie,
-                <br />
-                Design und Klarheit
+                Wir verbinden Strategie und Design zu einem Außenauftritt, der Vertrauen schafft.
               </p>
             </motion.div>
           </div>
