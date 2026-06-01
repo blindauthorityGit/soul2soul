@@ -54,8 +54,8 @@ export function ServicesIntroSection() {
                   className="absolute inset-[-8%] will-change-transform"
                 >
                   <Image
-                    src="/first.jpg"
-                    alt="Designprozess und Farbgestaltung"
+                    src="/services-intro.jpg"
+                    alt="Denise Ritschel und Sandra Löbl von Soul2Soul"
                     fill
                     className="object-cover"
                     priority

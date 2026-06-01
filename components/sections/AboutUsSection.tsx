@@ -72,12 +72,12 @@ export function AboutUsSection() {
             transition={{ duration: 1.05, delay: 0.12, ease }}
             className="relative flex items-center justify-center md:justify-end"
           >
-            <div className="relative aspect-[3/4] w-full max-w-[560px] overflow-hidden">
+            <div className="relative aspect-[4/3] w-full max-w-[680px] overflow-hidden">
               <Image
                 src="/about-us.jpg"
                 alt="Denise Ritschel und Sandra Löbl von Soul2Soul"
                 width={1200}
-                height={1600}
+                height={1200}
                 className="h-full w-full object-cover"
               />
             </div>
