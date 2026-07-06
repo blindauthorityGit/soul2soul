@@ -17,7 +17,7 @@ export function SiteFooter() {
   {/* Center */}
   <div className="flex items-center justify-center gap-6">
     <Link
-      href="https://instagram.com"
+      href="https://www.instagram.com/soul2soul.designstudio/"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Instagram"
@@ -27,7 +27,7 @@ export function SiteFooter() {
     </Link>
 
     <Link
-      href="https://facebook.com"
+      href="https://www.facebook.com/profile.php?id=61584970916517"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Facebook"

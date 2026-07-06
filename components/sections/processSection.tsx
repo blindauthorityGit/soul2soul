@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Body } from "@/components/typography";
 
 const items = [
   {
@@ -77,9 +78,9 @@ export function ProcessSection() {
                 {item.title}
               </h3>
 
-              <p className="mt-2 max-w-[360px] text-[20px] leading-[1.35] tracking-[-0.01em] text-[#2f6f73]/70 md:text-[22px] xl:text-[24px]">
+              <Body className="mt-2 max-w-[360px] text-[#2f6f73]/70">
                 {item.text}
-              </p>
+              </Body>
             </div>
           </motion.div>
         ))}

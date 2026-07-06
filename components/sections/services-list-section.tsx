@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
+import { Body } from "@/components/typography";
 
 const easing = [0.22, 1, 0.36, 1] as const;
 const easingExit = [0.4, 0, 0.2, 1] as const;
@@ -182,9 +183,9 @@ text-[clamp(1.8rem,7.5vw,3rem)]                        leading-[0.9]
                           transition={{ duration: 0.35, ease: easing }}
                           className="max-w-[720px] md:max-w-[760px]"
                         >
-                          <p className="text-[14px] leading-relaxed text-[#F4F1EB]/82 sm:text-[15px] md:text-[16px] xl:text-[18px]">
+                          <Body className="text-[#F4F1EB]/82">
                             {service.text}
-                          </p>
+                          </Body>
                         </motion.div>
                         <div />
                       </div>

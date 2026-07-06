@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { Body } from "@/components/typography";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -48,20 +49,20 @@ export function AboutUsSection() {
               transition={{ duration: 0.85, delay: 0.16, ease }}
               className="mt-8 max-w-[520px] md:mt-10"
             >
-              <p className="text-[18px] font-[350] leading-[1.45] tracking-[0.01em] text-[#2B2B2B] md:text-[23px] md:leading-[1.43]">
+              <Body className="text-[#2B2B2B]">
                 Mit über 13 Jahren Erfahrung im Design- und Agenturbereich
-                verbinden wir strategisches Denken mit persönlicher Begleitung
-                — damit professionelle Gestaltung auch für kleinere Unternehmen
-                leistbar bleibt.
-              </p>
-              <p className="mt-5 text-[18px] font-[350] leading-[1.45] tracking-[0.01em] text-[#2B2B2B] md:text-[23px] md:leading-[1.43]">
+                verbinden Denise Ritschel und Sandra Löbl strategisches Denken
+                mit persönlicher Begleitung — damit professionelle Gestaltung
+                auch für kleinere Unternehmen leistbar bleibt.
+              </Body>
+              <Body className="mt-5 text-[#2B2B2B]">
                 Dabei unterstützen wir nicht nur im Bereich Design und
                 Sichtbarkeit, sondern begleiten auch Neuselbstständige auf
                 ihrem Weg in die Selbstständigkeit — mit persönlicher Beratung,
                 Klarheit im Aufbau ihres Außenauftritts und einem bewussten
                 Blick auf Ressourcenmanagement, Struktur und nachhaltige
                 Umsetzung.
-              </p>
+              </Body>
             </motion.div>
           </motion.div>
 

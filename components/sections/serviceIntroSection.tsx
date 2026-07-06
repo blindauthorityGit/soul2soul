@@ -10,6 +10,7 @@ import {
 } from "framer-motion";
 import { ArrowRight, X } from "lucide-react";
 import ContactForm from "@/components/forms/ContactForms";
+import { Body } from "@/components/typography";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -89,9 +90,9 @@ export function ServicesIntroSection() {
                 transition={{ duration: 0.85, delay: 0.16, ease }}
                 className="font-serif text-[clamp(3rem,6vw,6.5rem)] leading-[0.9] tracking-[-0.03em] text-[#2f7c83]"
               >
-                Klarheit.
+                Für Menschen.
                 <br />
-                Wirkung. <span className="text-[#5FD1E3]">Sichtbarkeit.</span>
+                Nicht für <span className="text-[#5FD1E3]">Schubladen.</span>
               </motion.h2>
 
               <motion.div
@@ -101,7 +102,7 @@ export function ServicesIntroSection() {
                 transition={{ duration: 0.8, delay: 0.24, ease }}
                 className="mt-8 max-w-[640px]"
               >
-                <p className="text-[18px] font-[350] leading-[1.45] tracking-[0.01em] text-[#2B2B2B] md:text-[23px] md:leading-[1.43]">
+                <Body className="text-[#2B2B2B]">
                   Nicht jede Branche passt in klassisches Agentur-Denken.
                   Gerade persönliche und komplementärmedizinische Berufe
                   brauchen Feingefühl, Verständnis und authentische
@@ -119,7 +120,7 @@ export function ServicesIntroSection() {
                   Designlösungen anzubieten — besonders für Unternehmen mit
                   begrenzten Ressourcen und einem laufenden Bedarf an visueller
                   Kommunikation.
-                </p>
+                </Body>
               </motion.div>
 
               <motion.div

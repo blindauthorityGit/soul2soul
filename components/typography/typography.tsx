@@ -59,7 +59,7 @@ export const Lead = createTextComponent(
 
 export const Body = createTextComponent(
   "p",
-  "text-base leading-relaxed text-text-default sm:text-lg",
+  "text-[18px] font-[350] leading-[1.45] tracking-[0.01em] md:text-[23px] md:leading-[1.43]",
 );
 
 export const Small = createTextComponent(

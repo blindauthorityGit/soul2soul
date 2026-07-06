@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, X } from "lucide-react";
 import ContactForm from "@/components/forms/ContactForms";
+import { Body } from "@/components/typography";
 const ease = [0.22, 1, 0.36, 1] as const;
 
 export function ContactSection() {
@@ -23,17 +24,19 @@ export function ContactSection() {
             KONTAKT
           </motion.h2>
 
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.55 }}
             transition={{ duration: 0.8, delay: 0.08, ease }}
-            className="mt-8 max-w-[520px] text-[15px] font-[350] leading-[1.9] tracking-[0.03em] text-[#3f3a35] md:text-[17px]"
+            className="mt-8 max-w-[520px]"
           >
-            Wenn du spürst, dass da mehr möglich ist –
-            <br className="hidden sm:block" />
-            dann lass uns sprechen.
-          </motion.p>
+            <Body className="text-[#3f3a35]">
+              Wenn du spürst, dass da mehr möglich ist –
+              <br className="hidden sm:block" />
+              dann lass uns sprechen.
+            </Body>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 18 }}
